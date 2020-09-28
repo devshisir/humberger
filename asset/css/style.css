@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0
+}
+
+body {
+    font-family: 'Roboto', sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif
+}
+
+p {
+    font-family: 'Roboto', sans-serif
+}
+
+a {
+    text-decoration: none
+}
+
+body {
+    background: #ddd
+}
+
+#meuArea {
+    padding: 18px 0px;
+    background: #fff
+}
+
+#meuArea .logoarea a {
+    font-weight: 800;
+    color: #1e2858;
+    font-size: 22px
+}
+
+#meuArea .logoarea a:hover {
+    text-decoration: none
+}
+
+#meuArea .logoarea a i {
+    margin-right: 5px
+}
+
+#meuArea #hamburgerToggleBtn {
+    cursor: pointer;
+    font-size: 23px
+}
+
+#hamburgerMainContainer {
+    position: fixed;
+    top: 0;
+    right: -70%;
+    height: 100%;
+    width: 350px;
+    background: #223258;
+    max-height: 100vh;
+    overflow-y: scroll;
+    transition: 0.6s ease-out;
+    opacity: 0;
+    visibility: hidden
+}
+
+#hamburgerMainContainer .hamburgerClose {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px 30px
+}
+
+#hamburgerMainContainer .hamburgerClose i {
+    color: #fff
+}
+
+#hamburgerMainContainer .mneuArea {
+    padding: 30px 0px
+}
+
+#hamburgerMainContainer .mneuArea ul li {
+    display: block;
+    list-style: none;
+    margin-bottom: 5px
+}
+
+#hamburgerMainContainer .mneuArea ul li a {
+    color: #8a99b5;
+    display: block;
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    position: relative
+}
+
+#hamburgerMainContainer .mneuArea ul li a:after {
+    height: 0%;
+    width: 3px;
+    content: "";
+    top: 50%;
+    left: 0;
+    background: #fff;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    transition: 0.4s
+}
+
+#hamburgerMainContainer .mneuArea ul li a:hover {
+    color: #fff
+}
+
+#hamburgerMainContainer .mneuArea ul li a:hover:after {
+    height: 70%
+}
+
+#hamburgerMainContainer .mneuArea ul li a i {
+    min-width: 30px
+}
+
+#hamburgerMainContainer .mneuArea ul .active a {
+    color: #fff
+}
+
+#hamburgerMainContainer .mneuArea ul .active a:after {
+    height: 70%
+}
+
+#hamburgerMainContainer .languageDropDown {
+    padding: 0px 30px
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn {
+    display: block;
+    width: 100%;
+    background: #8a99b5;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 0px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.4s;
+    position: relative
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn:after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%)
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn i {
+    margin-right: 5px
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn:hover {
+    background: #fff;
+    color: #223258
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn[aria-expanded="true"]:after {
+    content: "\f106"
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    background: #8a99b5
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a {
+    padding: 0px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    padding: 10px 14px;
+    transition: 0.4s
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a i {
+    margin-right: 9px
+}
+
+#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a:hover {
+    background: #fff;
+    color: #223258
+}
+
+#hamburgerMainContainer .claatoAction {
+    padding: 0px 30px;
+    margin-top: 40px
+}
+
+#hamburgerMainContainer .claatoAction a {
+    display: block;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0px;
+    border-radius: 4px;
+    transition: 0.4s
+}
+
+#hamburgerMainContainer .claatoAction a p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #223258
+}
+
+#hamburgerMainContainer .claatoAction a h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #223258
+}
+
+#hamburgerMainContainer .claatoAction a:hover {
+    background: #8a99b5;
+    color: #fff
+}
+
+#hamburgerMainContainer .claatoAction a:hover p {
+    color: #fff
+}
+
+#hamburgerMainContainer .claatoAction a:hover h4 {
+    color: #fff
+}
+
+#hamburgerMainContainer.show {
+    right: 0;
+    opacity: 1;
+    visibility: visible
+}
+
+#hamburgerMainContainer::-webkit-scrollbar {
+    width: 3px
+}
+
+#hamburgerMainContainer::-moz-scrollbar {
+    width: 3px
+}
+
+#hamburgerMainContainer::-o-scrollbar {
+    width: 3px
+}
+
+#hamburgerMainContainer::-ms-scrollbar {
+    width: 3px
+}
+
+#hamburgerMainContainer::-webkit-scrollbar-track {
+    box-shadow: none
+}
+
+#hamburgerMainContainer::-moz-scrollbar-track {
+    box-shadow: none
+}
+
+#hamburgerMainContainer::-o-scrollbar-track {
+    box-shadow: none
+}
+
+#hamburgerMainContainer::-ms-scrollbar-track {
+    box-shadow: none
+}
+
+#hamburgerMainContainer::-webkit-scrollbar-thumb {
+    background-color: #8a99b5;
+    outline: 1px solid slategrey
+}
+
+#hamburgerMainContainer::-moz-scrollbar-thumb {
+    background-color: #8a99b5;
+    outline: 1px solid slategrey
+}
+
+#hamburgerMainContainer::-o-scrollbar-thumb {
+    background-color: #8a99b5;
+    outline: 1px solid slategrey
+}
+
+#hamburgerMainContainer::-ms-scrollbar-thumb {
+    background-color: #8a99b5;
+    outline: 1px solid slategrey
+}
