@@ -25,12 +25,15 @@ a {
     text-decoration: none
 }
 
+.show_mobile {
+    display: none !important
+}
+
 body {
     background: #ddd
 }
 
 #meuArea {
-    padding: 18px 0px;
     background: #fff
 }
 
@@ -48,253 +51,184 @@ body {
     margin-right: 5px
 }
 
-#meuArea #hamburgerToggleBtn {
+#meuArea .menuAreaHeader nav ul {
+    margin: 0
+}
+
+#meuArea .menuAreaHeader nav ul>li {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 23px
+    margin-left: 20px;
+    color: #232323;
+    transition: 0.4s;
+    position: relative;
+    padding: 24px 0px
 }
 
-#hamburgerMainContainer {
-    position: fixed;
-    top: 0;
-    right: -70%;
-    height: 100%;
-    width: 350px;
-    background: #223258;
-    max-height: 100vh;
-    overflow-y: scroll;
-    transition: 0.6s ease-out;
-    opacity: 0;
-    visibility: hidden
+#meuArea .menuAreaHeader nav ul>li i {
+    margin-right: 3px
 }
 
-#hamburgerMainContainer .hamburgerClose {
-    cursor: pointer;
-    font-size: 24px;
-    padding: 15px 30px
-}
-
-#hamburgerMainContainer .hamburgerClose i {
-    color: #fff
-}
-
-#hamburgerMainContainer .mneuArea {
-    padding: 30px 0px
-}
-
-#hamburgerMainContainer .mneuArea ul li {
-    display: block;
-    list-style: none;
-    margin-bottom: 5px
-}
-
-#hamburgerMainContainer .mneuArea ul li a {
-    color: #8a99b5;
-    display: block;
-    padding: 10px 30px;
+#meuArea .menuAreaHeader nav ul>li a {
     font-weight: 500;
     font-size: 15px;
     text-decoration: none;
-    transition: 0.4s;
-    position: relative
+    color: #232323;
+    display: block;
+    transition: 0.4s
 }
 
-#hamburgerMainContainer .mneuArea ul li a:after {
-    height: 0%;
-    width: 3px;
-    content: "";
-    top: 50%;
+#meuArea .menuAreaHeader nav ul>li a i {
+    margin-right: 3px
+}
+
+#meuArea .menuAreaHeader nav ul>li:hover {
+    color: #82C91E
+}
+
+#meuArea .menuAreaHeader nav ul>li:hover>a {
+    color: #82C91E
+}
+
+#meuArea .menuAreaHeader nav ul>li ul.dropdwnCsutom {
+    position: absolute;
+    width: 240px;
+    background: #fff;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    top: 100%;
     left: 0;
-    background: #fff;
-    position: absolute;
-    transform: translateY(-50%);
-    border-radius: 30px;
-    transition: 0.4s
-}
-
-#hamburgerMainContainer .mneuArea ul li a:hover {
-    color: #fff
-}
-
-#hamburgerMainContainer .mneuArea ul li a:hover:after {
-    height: 70%
-}
-
-#hamburgerMainContainer .mneuArea ul li a i {
-    min-width: 30px
-}
-
-#hamburgerMainContainer .mneuArea ul .active a {
-    color: #fff
-}
-
-#hamburgerMainContainer .mneuArea ul .active a:after {
-    height: 70%
-}
-
-#hamburgerMainContainer .languageDropDown {
-    padding: 0px 30px
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn {
+    border-radius: 0px 0px 4px 4px;
+    z-index: -1;
     display: block;
-    width: 100%;
-    background: #8a99b5;
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 12px 0px;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    transition: 0.4s;
-    position: relative
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    margin-top: 0;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%
 }
 
-#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn:after {
-    font-family: "Font Awesome 5 Pro";
-    content: "\f107";
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%)
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn i {
-    margin-right: 5px
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn:hover {
-    background: #fff;
-    color: #223258
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropLanguageBtn[aria-expanded="true"]:after {
-    content: "\f106"
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu {
-    width: 100%;
-    padding: 0px;
-    border-radius: 0px;
-    background: #8a99b5
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a {
-    padding: 0px;
-    color: #fff;
-    font-weight: 400;
-    font-size: 14px;
+#meuArea .menuAreaHeader nav ul>li ul.dropdwnCsutom li {
     display: block;
-    padding: 10px 14px;
-    transition: 0.4s
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a i {
-    margin-right: 9px
-}
-
-#hamburgerMainContainer .languageDropDown .dropdown .dropdown-menu a:hover {
-    background: #fff;
-    color: #223258
-}
-
-#hamburgerMainContainer .claatoAction {
-    padding: 0px 30px;
-    margin-top: 40px
-}
-
-#hamburgerMainContainer .claatoAction a {
-    display: block;
-    background: #fff;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 0px;
-    border-radius: 4px;
-    transition: 0.4s
-}
-
-#hamburgerMainContainer .claatoAction a p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    color: #223258
-}
-
-#hamburgerMainContainer .claatoAction a h4 {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    font-weight: 600;
-    color: #223258
+    text-align: left
 }
 
-#hamburgerMainContainer .claatoAction a:hover {
-    background: #8a99b5;
-    color: #fff
+#meuArea .menuAreaHeader nav ul>li ul.dropdwnCsutom li a {
+    margin: 0;
+    padding: 0;
+    padding: 8px 14px;
+    display: block;
+    font-size: 14px
 }
 
-#hamburgerMainContainer .claatoAction a:hover p {
-    color: #fff
+#meuArea .menuAreaHeader nav ul>li ul.dropdwnCsutom li a:hover {
+    background: #82C91E;
+    color: #fff;
+    padding-left: 18px
 }
 
-#hamburgerMainContainer .claatoAction a:hover h4 {
-    color: #fff
+#meuArea .menuAreaHeader nav ul>li ul.dropdwnCsutom li a i {
+    margin-right: 4px
 }
 
-#hamburgerMainContainer.show {
-    right: 0;
+#meuArea .menuAreaHeader nav ul>li:hover ul.dropdwnCsutom {
+    transform: rotateX(0deg);
     opacity: 1;
     visibility: visible
 }
 
-#hamburgerMainContainer::-webkit-scrollbar {
-    width: 3px
+#meuArea .languageDropDown select {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    cursor: pointer
 }
 
-#hamburgerMainContainer::-moz-scrollbar {
-    width: 3px
+.slicknav_menu {
+    display: none
 }
 
-#hamburgerMainContainer::-o-scrollbar {
-    width: 3px
+.slicknav_menu {
+    background: #fff;
+    padding: 8px 20px
 }
 
-#hamburgerMainContainer::-ms-scrollbar {
-    width: 3px
+.slicknav_btn {
+    padding: 14px 14px;
+    border-radius: 0px
 }
 
-#hamburgerMainContainer::-webkit-scrollbar-track {
-    box-shadow: none
+.slicknav_brand {
+    font-weight: 700;
+    color: #232323;
+    line-height: 39px;
+    font-size: 20px
 }
 
-#hamburgerMainContainer::-moz-scrollbar-track {
-    box-shadow: none
+.slicknav_brand i {
+    margin-right: 4px
 }
 
-#hamburgerMainContainer::-o-scrollbar-track {
-    box-shadow: none
+.slicknav_nav li,
+.slicknav_nav ul li {
+    display: block;
+    color: #232323;
+    font-weight: 500
 }
 
-#hamburgerMainContainer::-ms-scrollbar-track {
-    box-shadow: none
+.slicknav_nav li a,
+.slicknav_nav ul li a {
+    color: #232323;
+    font-weight: 500
 }
 
-#hamburgerMainContainer::-webkit-scrollbar-thumb {
-    background-color: #8a99b5;
-    outline: 1px solid slategrey
+.slicknav_nav .slicknav_row,
+.slicknav_nav a {
+    padding: 0px;
+    margin: 0px;
+    padding: 10px 10px
 }
 
-#hamburgerMainContainer::-moz-scrollbar-thumb {
-    background-color: #8a99b5;
-    outline: 1px solid slategrey
+.slicknav_nav .slicknav_arrow {
+    position: absolute;
+    right: 37px
 }
 
-#hamburgerMainContainer::-o-scrollbar-thumb {
-    background-color: #8a99b5;
-    outline: 1px solid slategrey
+.slicknav_nav .slicknav_row:hover {
+    border-radius: 0px;
+    background: #232323;
+    color: #fff
 }
 
-#hamburgerMainContainer::-ms-scrollbar-thumb {
-    background-color: #8a99b5;
-    outline: 1px solid slategrey
+.slicknav_nav .slicknav_row,
+.slicknav_nav a i {
+    margin-right: 3px;
+    min-width: 21px
+}
+
+.slicknav_nav ul.dropdwnCsutom {
+    background: #192227;
+    margin: 0;
+    width: 99%;
+    padding-left: 14px;
+    padding-bottom: 10px
+}
+
+.slicknav_nav ul.dropdwnCsutom li a {
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 10px
+}
+
+.slicknav_parent.slicknav_open .slicknav_item.slicknav_row {
+    border-radius: 0px;
+    background: #232323;
+    color: #fff
 }
